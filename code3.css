@@ -1,0 +1,97 @@
+/* 基础样式保留 */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f0eb; /* 浅咖啡色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    padding-top: 50px;
+    margin: 0;
+  }
+  
+  .card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  /* 咖啡主题装饰 */
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #6F4E37; /* 咖啡色 */
+    clip-path: polygon(0 0, 100% 0, 100% 100%); /* 右上角三角 */
+  }
+  
+  h1 {
+    color: #6F4E37;
+    margin-top: 0;
+    position: relative;
+    padding-left: 40px;
+  }
+  
+  h1::before {
+    content: "☕";
+    position: absolute;
+    left: 0;
+    top: -5px;
+    font-size: 1.8rem;
+  }
+  
+  /* 文字细节 */
+  p {
+    margin: 12px 0;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 20px;
+  }
+  
+  p::before {
+    content: "•";
+    color: #6F4E37;
+    position: absolute;
+    left: 0;
+  }
+  
+  /* 链接特效 */
+  a {
+    color: #E67A00; /* 橙咖啡色 */
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  a:hover {
+    color: #6F4E37;
+  }
+  
+  a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #6F4E37;
+    transition: width 0.3s;
+  }
+  
+  a:hover::after {
+    width: 100%;
+  }
+  
+  /* 悬浮动效 */
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  }
